@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		
 		<link href="/assets/styles.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
@@ -11,9 +12,12 @@
 				<button type="submit">Add Item</button>
 			</form>
 			<ul>
-
+				<% todos.forEach(function(todo){ %>
+					<li><%=todo.item%></li>
+				<% }); %>
 			</ul>
 		</div>
+		<script src="/assets/todo-list.js"></script>
 	</body>
 
 </html>

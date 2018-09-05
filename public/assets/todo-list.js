@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  console.log("Hello");
   $('form').on('submit', function(){
 
       var item = $('form input');
