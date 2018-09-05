@@ -41,9 +41,7 @@ module.exports= function(app){
 
 	app.delete('/todo/:item', function(req, res){
 		//delete requested item from mongodb
-		var tmp = req.params.items.replace(/-/g, ' ');
-		console.log(tmp);
-		Todo.find({item: tmp}).remove(function(err,data){5
+		Todo.find({item: req.params.item}).deleteOne(function(err,data){
 			if(err) throw err;
 			res.json(data);
 		});
